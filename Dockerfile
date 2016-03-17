@@ -29,17 +29,3 @@ RUN curl http://get.sensiolabs.org/php-cs-fixer.phar -o /usr/local/bin/php-cs-fi
 RUN mkdir -p /root/
 
 WORKDIR /root/
-
-ADD composer.json composer.json
-ADD composer.lock composer.lock
-
-RUN composer install
-
-RUN mkdir -p tools/sql/
-
-ADD tools/sql/create_db_dev.sql tools/sql/create_db_dev.sql
-ADD tools/sql/create_tables.sql tools/sql/create_tables.sql
-
-RUN /etc/init.d/mysql start && \
-        mysql -u root < tools/sql/create_db_dev.sql && \
-        mysql -u root hozana_dev < tools/sql/create_tables.sql
