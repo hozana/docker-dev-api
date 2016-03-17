@@ -26,6 +26,6 @@ RUN curl http://get.sensiolabs.org/sami.phar -o /usr/local/bin/sami && \
 RUN curl http://get.sensiolabs.org/php-cs-fixer.phar -o /usr/local/bin/php-cs-fixer && \
     chmod +x /usr/local/bin/php-cs-fixer
 
-RUN mkdir -p /root/
+RUN mkdir -p /root/api/
 
-WORKDIR /root/
+WORKDIR /root/api/
