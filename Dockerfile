@@ -1,18 +1,21 @@
 FROM debian:8
 
-RUN apt-get update && export DEBIAN_FRONTEND="noninteractive" && \
-    apt-get install -y --force-yes \
+RUN apt-get update && apt-get install -y --force-yes \
     build-essential \
     curl \
-    graphviz \
+    less
+
+RUN apt-get update && export DEBIAN_FRONTEND="noninteractive" && apt-get install -y --force-yes \
     mysql-server \
     php5 \
     php5-curl \
     php5-mysql \
-    php5-xdebug \
-    python-pip
+    php5-xdebug
 
-RUN pip install sphinx sphinx_rtd_theme
+RUN apt-get update && apt-get install -y --force-yes git python-pip graphviz && \
+    pip install sphinx sphinx_rtd_theme
+
+RUN apt-get autoremove --purge -y && apt-get clean
 
 RUN curl https://getcomposer.org/download/1.0.0-alpha11/composer.phar -o /usr/local/bin/composer && \
     chmod +x /usr/local/bin/composer
