@@ -1,0 +1,25 @@
+# docker-dev-api Changelog
+
+## Version 0.2
+
+# Features
+
+- Composer 1.1.1
+- Mysql 14.14
+- PHP 7.0
+- PHPUnit 5.3.4
+- php-cs-fixer 2.0-DEV
+- Sami 3.2.1-DEV
+- Sphinx 1.4.2 with graphviz
+
+## Version 0.1
+
+# Features
+
+- Composer 1.0.0-alpha11
+- Mysql
+- PHP 5.6
+- PHPUnit 5.2.9
+- php-cs-fixer
+- Sami
+- Sphinx with graphviz
