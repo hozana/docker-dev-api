@@ -1,7 +1,7 @@
 # docker-dev-api
 
 All tools in one image to work on PHP API:
-- PHP
+- PHP 7
 - Mysql
 - composer
 - phpunit
