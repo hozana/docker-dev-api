@@ -11,6 +11,7 @@ RUN apt-get update && export DEBIAN_FRONTEND="noninteractive" && apt-get install
     php7.0-curl \
     php7.0-mbstring \
     php7.0-mysql \
+    php7.0-intl \
     php7.0-xml
 
 RUN apt-get update && apt-get install -y --force-yes git python-pip graphviz && \
